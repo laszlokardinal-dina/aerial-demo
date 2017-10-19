@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label {
+  width: 100%;
+  font-size: 10px;
+  color: rgba(0,0,0,0.4);
+  padding: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.labelActive {
+  color: rgba(0,0,0,1);
+}
+
+.input {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: 100%;
+}

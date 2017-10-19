@@ -1,0 +1,17 @@
+.sizeDisplay {
+  margin-top: 8px;
+  width: 200px;
+  display: flex;
+}
+
+.size {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,0.4);
+}
+
+.sizeActive {
+  color: rgba(0,0,0,1);
+}
