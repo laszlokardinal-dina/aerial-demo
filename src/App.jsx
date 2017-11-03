@@ -220,91 +220,93 @@ class App extends Component {
               </table>
             </div>
           </div>
-          <div className={style.virtualScreen} style={{ width: deviceWidth }}>
-            <Container>
-              <Row {...row}>
-                {cols.map(col => (
-                  <Col key={col.id} {...col}>
-                    <Card>
-                      <div className={style.cardTitle}>Col {col.title}</div>
-                      <table className={style.cardTable}>
-                        <tbody>
-                          <tr>
-                            {sizes.map(size => (
-                              <td key={size}>
-                                <TextInput
-                                  numeric
-                                  value={col[size]}
-                                  label={size}
-                                  onChange={value =>
-                                    this.colParameterChange(
-                                      col.id,
-                                      size,
-                                      value
-                                    )}
-                                />
-                              </td>
-                            ))}
-                          </tr>
-                          <tr>
-                            {sizes.map(size => (
-                              <td key={size}>
-                                <TextInput
-                                  numeric
-                                  value={col[`${size}Offset`]}
-                                  label={`${size}Offset`}
-                                  onChange={value =>
-                                    this.colParameterChange(
-                                      col.id,
-                                      `${size}Offset`,
-                                      value
-                                    )}
-                                />
-                              </td>
-                            ))}
-                          </tr>
-                          <tr>
-                            {sizes.map(size => (
-                              <td key={size}>
-                                <SelectInput
-                                  value={col[`${size}VerticalAlign`]}
-                                  label={`${size}VerticalAlign`}
-                                  options={COL_VERTICAL_ALIGNS}
-                                  onChange={value =>
-                                    this.colParameterChange(
-                                      col.id,
-                                      `${size}VerticalAlign`,
-                                      value
-                                    )}
-                                />
-                              </td>
-                            ))}
-                          </tr>
-                          <tr>
-                            {sizes.map(size => (
-                              <td key={size}>
-                                <TextInput
-                                  numeric
-                                  value={col[`${size}Order`]}
-                                  label={`${size}Order`}
-                                  onChange={value =>
-                                    this.colParameterChange(
-                                      col.id,
-                                      `${size}Order`,
-                                      value
-                                    )}
-                                />
-                              </td>
-                            ))}
-                          </tr>
-                        </tbody>
-                      </table>
-                      <div className={style.cardText}>{col.text}</div>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Container>
+          <div className={style.virtualScreenWrapper}>
+            <div className={style.virtualScreen} style={{ width: deviceWidth }}>
+              <Container>
+                <Row {...row}>
+                  {cols.map(col => (
+                    <Col key={col.id} {...col}>
+                      <Card>
+                        <div className={style.cardTitle}>Col {col.title}</div>
+                        <table className={style.cardTable}>
+                          <tbody>
+                            <tr>
+                              {sizes.map(size => (
+                                <td key={size}>
+                                  <TextInput
+                                    numeric
+                                    value={col[size]}
+                                    label={size}
+                                    onChange={value =>
+                                      this.colParameterChange(
+                                        col.id,
+                                        size,
+                                        value
+                                      )}
+                                  />
+                                </td>
+                              ))}
+                            </tr>
+                            <tr>
+                              {sizes.map(size => (
+                                <td key={size}>
+                                  <TextInput
+                                    numeric
+                                    value={col[`${size}Offset`]}
+                                    label={`${size}Offset`}
+                                    onChange={value =>
+                                      this.colParameterChange(
+                                        col.id,
+                                        `${size}Offset`,
+                                        value
+                                      )}
+                                  />
+                                </td>
+                              ))}
+                            </tr>
+                            <tr>
+                              {sizes.map(size => (
+                                <td key={size}>
+                                  <SelectInput
+                                    value={col[`${size}VerticalAlign`]}
+                                    label={`${size}VerticalAlign`}
+                                    options={COL_VERTICAL_ALIGNS}
+                                    onChange={value =>
+                                      this.colParameterChange(
+                                        col.id,
+                                        `${size}VerticalAlign`,
+                                        value
+                                      )}
+                                  />
+                                </td>
+                              ))}
+                            </tr>
+                            <tr>
+                              {sizes.map(size => (
+                                <td key={size}>
+                                  <TextInput
+                                    numeric
+                                    value={col[`${size}Order`]}
+                                    label={`${size}Order`}
+                                    onChange={value =>
+                                      this.colParameterChange(
+                                        col.id,
+                                        `${size}Order`,
+                                        value
+                                      )}
+                                  />
+                                </td>
+                              ))}
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div className={style.cardText}>{col.text}</div>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              </Container>
+            </div>
           </div>
         </div>
       </ScreenDetailsProvider>

@@ -1,9 +1,9 @@
 .app {
-  background-color: #c0c0c0;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .header {
@@ -36,10 +36,16 @@
   border: 1px solid #d0d0d0;
 }
 
+.virtualScreenWrapper {
+  width: 100%;
+  overflow: auto;
+  background-color: #d0d0d0;
+}
+
 .virtualScreen {
-  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #f0f0f0;
-  overflow-y: auto;
 }
 
 .cardTitle {
