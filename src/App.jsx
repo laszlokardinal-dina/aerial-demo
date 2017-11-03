@@ -128,7 +128,7 @@ class App extends Component {
             <div className={style.headerItem}>
               <div className={style.title}>Aerial Demo Page</div>
               <div>
-                github: <br/>
+                github: <br />
                 <a href="https://github.com/laszlokardinal/aerial">
                   https://github.com/laszlokardinal/aerial
                 </a>
