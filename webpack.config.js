@@ -5,7 +5,7 @@ module.exports = {
   devtool: "eval",
   entry: ["webpack-dev-server/client?http://localhost:4700", "./src/index.jsx"],
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "build"),
     filename: "bundle.js",
     publicPath: "/build/"
   },
